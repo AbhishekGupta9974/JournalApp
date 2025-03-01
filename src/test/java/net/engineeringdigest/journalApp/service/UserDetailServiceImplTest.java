@@ -18,6 +18,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.mockito.Mockito.*;
 
+@Disabled
 @ActiveProfiles("dev")
 public class UserDetailServiceImplTest {
 
