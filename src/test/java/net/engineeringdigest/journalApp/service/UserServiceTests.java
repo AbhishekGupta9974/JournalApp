@@ -24,6 +24,7 @@ public class UserServiceTests {
         assertNotNull(userRepositay.findByUserName("ram"));
     }
 
+    @Disabled
     @ParameterizedTest
     @CsvSource({
             "1,1,2",

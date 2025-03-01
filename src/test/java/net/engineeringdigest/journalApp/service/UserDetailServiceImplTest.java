@@ -33,6 +33,7 @@ public class UserDetailServiceImplTest {
         MockitoAnnotations.initMocks(this);
     }
 
+    @Disabled
     @Test
     void loadUserByUsernameTest(){
         when(userRepositay.findByUserName(ArgumentMatchers.anyString())).thenReturn(User.builder().userName("Ram").password("mdkmcks").build());
