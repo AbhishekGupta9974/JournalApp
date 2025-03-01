@@ -10,8 +10,9 @@ import org.junit.jupiter.params.provider.ArgumentsSource;
 
 import java.util.stream.Stream;
 
-@Disabled
+
 public class UserArgumentsProvider implements ArgumentsProvider {
+
 
     @Override
     public Stream<? extends Arguments> provideArguments(ExtensionContext extensionContext) throws Exception {
