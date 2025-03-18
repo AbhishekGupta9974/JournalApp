@@ -1,4 +1,4 @@
-package net.engineeringdigest.journalApp.Controller;
+package net.engineeringdigest.journalApp.controller;
 
 import net.engineeringdigest.journalApp.api.response.WeatherResponse;
 import net.engineeringdigest.journalApp.entity.User;
@@ -52,14 +52,14 @@ public class UserController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
 
-    @GetMapping
-    public ResponseEntity<?> greeting(){
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        WeatherResponse weatherResponse = weatherService.getWeather("Mumbai");
-        String greeting = "";
-        if(weatherResponse != null){
-            greeting = ", Weather feels like " + weatherResponse.getCurrent().getFeelslike();
+        @GetMapping
+        public ResponseEntity<?> greeting(){
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            WeatherResponse weatherResponse = weatherService.getWeather("Mumbai");
+            String greeting = "";
+            if(weatherResponse != null){
+                greeting = ", Weather feels like " + weatherResponse.getCurrent().getFeelslike();
+            }
+            return new ResponseEntity<>("Hi " + authentication.getName() + greeting,HttpStatus.OK);
         }
-        return new ResponseEntity<>("Hi " + authentication.getName() + greeting,HttpStatus.OK);
-    }
 }

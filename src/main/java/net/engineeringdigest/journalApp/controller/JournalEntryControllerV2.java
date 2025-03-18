@@ -1,4 +1,4 @@
-package net.engineeringdigest.journalApp.Controller;
+package net.engineeringdigest.journalApp.controller;
 
 import net.engineeringdigest.journalApp.entity.JournalEntry;
 import net.engineeringdigest.journalApp.entity.User;
